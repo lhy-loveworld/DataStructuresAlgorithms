@@ -1,0 +1,6 @@
+Use of unordered_map
+#1-1
+
+unordered_map<Type, Type> lookUp;
+lookUp[key] = value; //insert
+unordered_map<Type, Type>::iterator it = lookUp.find(key); //find

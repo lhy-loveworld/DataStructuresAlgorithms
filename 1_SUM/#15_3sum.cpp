@@ -2,6 +2,8 @@
 //Convert it into a loop of 2 Sum. First sort it and then use two-pointer method
 //Time O(NlogN+N^2) = O(N^2)
 //Space O(N)
+//https://leetcode.com/problems/3sum/?tab=Description
+//Medium
 
 class Solution {
 public:

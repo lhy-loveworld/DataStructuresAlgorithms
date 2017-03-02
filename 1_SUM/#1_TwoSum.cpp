@@ -4,6 +4,8 @@
 //Space: O(N)
 //Time: O(N)
 //Use of unordered_map as hash table
+//Easy
+//https://leetcode.com/problems/two-sum/?tab=Description
 
 class Solution {
 public:

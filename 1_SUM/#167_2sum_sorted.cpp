@@ -3,6 +3,8 @@
 //Two pointers
 //Space: O(N)
 //Time: O(N)
+//Easy
+//https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/?tab=Description
 
 class Solution {
 public:

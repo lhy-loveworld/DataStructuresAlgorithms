@@ -1,11 +1,11 @@
 //#1
-//Two ways to solve this problem: Brute force & Hash
-//Hash
-//Space: O(N)
-//Time: O(N)
-//Use of unordered_map as hash table
 //Easy
 //https://leetcode.com/problems/two-sum/?tab=Description
+//Arthor: lhy-loveworld
+//Two ways to solve this problem: Brute force & HashUse of unordered_map as hash table
+//Hash
+//Complexity: Space: O(N); Time: O(N);
+
 
 class Solution {
 public:

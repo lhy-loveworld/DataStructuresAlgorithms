@@ -2,8 +2,8 @@
 //Easy
 //https://leetcode.com/problems/two-sum/?tab=Description
 //Arthor: lhy-loveworld
-//Two ways to solve this problem: Brute force & HashUse of unordered_map as hash table
-//Hash
+//Method: Two ways to solve this problem: Brute force & HashUse of unordered_map as hash table
+//        Hash
 //Complexity: Space: O(N); Time: O(N);
 
 

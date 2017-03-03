@@ -1,0 +1,6 @@
+Vector:
+  vector<T> v(size, value);
+  operator = vector<T> &;
+  
+  push_back()
+  [] will get error when no element

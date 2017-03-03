@@ -1,9 +1,9 @@
 //#15 3Sum
-//Convert it into a loop of 2 Sum. First sort it and then use two-pointer method
-//Time O(NlogN+N^2) = O(N^2)
-//Space O(N)
-//https://leetcode.com/problems/3sum/?tab=Description
 //Medium
+//https://leetcode.com/problems/3sum/?tab=Description
+//Arthor: lhy-loveworld
+//Method: Convert it into a loop of 2 Sum. First sort it and then use two-pointer method
+//Complexity: Time O(NlogN+N^2) = O(N^2); Space O(N)
 
 class Solution {
 public:

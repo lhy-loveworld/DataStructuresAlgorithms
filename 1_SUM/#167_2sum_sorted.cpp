@@ -1,10 +1,11 @@
-//167. Two Sum II - Input array is sorted
-//Two pointers or hash
-//Two pointers
-//Space: O(N)
-//Time: O(N)
+//#167. Two Sum II - Input array is sorted
 //Easy
 //https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/?tab=Description
+//Method: Two pointers or hash
+//        This code use two pointers
+//Arthor: lhy-loveworld
+//Complexity: Space: O(N); Time: O(N)
+
 
 class Solution {
 public:

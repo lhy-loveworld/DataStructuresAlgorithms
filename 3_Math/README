@@ -1,31 +1,35 @@
-Level	Precedence group	Operator		Description				Grouping
-1	Scope			::			scope qualifier				Left-to-right
-2	Postfix (unary)		++ --			postfix increment / decrement		
-				()			functional forms
-				[]			subscript
-				. ->			member access
-3	Prefix (unary)		++ --			prefix increment / decrement		Right-to-left
-				~ !			bitwise NOT / logical NOT
-				+ -			unary prefix
-				& *			reference / dereference
-				new delete		allocation / deallocation
-				sizeof			parameter pack
-				(type)			C-style type-casting
-4	Pointer-to-member	.* ->*			access pointer				Left-to-right
-5	Arithmetic: scaling	* / %			multiply, divide, modulo	
-6	Arithmetic: addition	+ -			addition, subtraction			
-7	Bitwise shift		<< >>			shift left, shift right			
-8	Relational		< > <= >=		comparison operators			
-9	Equality		== !=			equality / inequality			
-10	And			&			bitwise AND			
-11	Exclusive or		^			bitwise XOR				
-12	Inclusive or		|			bitwise OR				
-13	Conjunction		&&			logical AND				
-14	Disjunction		||			logical OR				
-15	Assignment-level	= *= /= %= += -=	assignment / compound assignment	Right-to-left
-	expressions		>>= <<= &= ^= |=		
-				?:			conditional operator
-16	Sequencing		,			comma separator				Left-to-right
+Level	Precedence group	Operator	Description			Grouping
+1	Scope			::		scope qualifier			Left-to-right
+2	Postfix (unary)		++ 		postfix increment
+				--		postfix decrement		
+				()		functional forms
+				[]		subscript
+				. ->		member access
+3	Prefix (unary)		++ 		prefix increment		Right-to-left
+				--		prefix decrement
+				~ !		bitwise NOT / logical NOT
+				+ -		unary prefix
+				& *		reference / dereference
+				new delete	allocation / deallocation
+				sizeof		parameter pack
+				(type)		C-style type-casting
+4	Pointer-to-member	.* ->*		access pointer			Left-to-right
+5	Arithmetic: scaling	* / %		multiply, divide, modulo	
+6	Arithmetic: addition	+ -		addition, subtraction			
+7	Bitwise shift		<< >>		shift left, shift right			
+8	Relational		< > <= >=	comparison operators			
+9	Equality		== !=		equality / inequality			
+10	And			&		bitwise AND			
+11	Exclusive or		^		bitwise XOR				
+12	Inclusive or		|		bitwise OR				
+13	Conjunction		&&		logical AND				
+14	Disjunction		||		logical OR				
+15	Assignment-level	= *= /= 	assignment  			Right-to-left
+	expressions		%= += -=	compound assignment	
+				>>= <<=
+				&= ^= |=
+				?:		conditional operator
+16	Sequencing		,		comma separator			Left-to-right
 ---------------------------------------------------------------------------------------------------------------------------------
 Group				Type names*		Notes on size / precision
 Character types			char			Exactly one byte in size. At least 8 bits.

@@ -2,7 +2,7 @@
 //Easy
 //https://leetcode.com/problems/power-of-two/?tab=Description
 //Arthor: lhy-loveworld
-//Method: Bitwise operation
+//Method: Bitwise operation; Caution how to implement this
 //Complexity: time O(1); space O(1)
 
 class Solution {

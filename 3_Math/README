@@ -30,7 +30,7 @@ Level	Precedence group	Operator	Description			Grouping
 				&= ^= |=
 				?:		conditional operator
 16	Sequencing		,		comma separator			Left-to-right
----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 Group				Type names*		Notes on size / precision
 Character types			char			Exactly one byte in size. At least 8 bits.
 				char16_t		Not smaller than char. At least 16 bits.

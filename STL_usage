@@ -1,6 +1,40 @@
 Vector:
+  can be used as an array or a disjoint set
+  
   vector<T> v(size, value);
   operator = vector<T> &;
   
-  push_back()
+  v.push_back()
   [] will get error when no element
+  v.at(i) will throw out_of_range of n
+  
+  v.front()
+  v.back()
+  v.pop_back()
+  v.reserve(n)
+  
+-------------------------------------------------------------------------------------------------
+
+set: binary search tree, stores key, ordered by key, key unique
+multiset binary search tree, stores key, ordered by key, key not unique
+map: binary search tree, stores <key,value>, ordered by key, key unique
+multimap: binary search tree, stores <key,value>, ordered by key, key not unique
+unordered_set: hash table, stores key, hashed by key, key unique
+unordered_multiset: hash table, stores key, hashed by key, key not unique
+unordered_map: hash table, stores <key,value>, hashed by key, key unique
+unordered_multimap: hash table, stores <key,value>, hashed by key, key not unique
+
+map:
+  can be used as an array (store index in the key)
+  can use a self-designed struct comp
+
+struct classcomp {
+  bool operator() (const char& lhs, const char& rhs) const
+  {return lhs<rhs;}
+};
+
+  map<char,int,classcomp> fourth;
+  
+priority_queue:
+  
+  

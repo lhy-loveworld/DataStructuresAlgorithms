@@ -2,7 +2,7 @@
 //Easy
 //https://leetcode.com/problems/majority-element/tabs/description
 //Arthor: lhy-loveworld
-//Method: Majority element means its amount is larger than any other elements.
+//Method: Majority element means its amount is larger than the sum of all other elements.
 //Complexity: Time O(N); Space O(1)
 class Solution {
 public:

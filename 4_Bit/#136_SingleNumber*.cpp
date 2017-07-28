@@ -1,5 +1,5 @@
 //#136 Single Number
-//Medium
+//Easy
 //https://leetcode.com/problems/single-number/tabs/description
 //Arthor: lhy-loveworld
 //Method: When a number xor another number for two times, it still equals to the original one.

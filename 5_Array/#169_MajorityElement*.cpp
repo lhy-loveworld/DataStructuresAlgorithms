@@ -1,3 +1,9 @@
+//#169 Majority Element
+//Easy
+//https://leetcode.com/problems/majority-element/tabs/description
+//Arthor: lhy-loveworld
+//Method: Majority element means its amount is larger than any other elements.
+//Complexity: Time O(N); Space O(1)
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {

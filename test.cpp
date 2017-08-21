@@ -2,12 +2,8 @@
 
 using namespace std;
 
-void adds(int a) {
-	a++;
-	cout << a;
-}
 int main () {
-	int i = 10;
-	adds(i);
+	int i = (0 == 0);
+	cout << (3 ^ 8) << ' ' << (3^10) <<' '<<(3^2)<<' '<<(3^5)<<' '<<(3^25);
 	return 0;
 }

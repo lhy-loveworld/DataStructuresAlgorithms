@@ -1,7 +1,5 @@
 //#303_RangeSumQuery
 //Easy
-//https://leetcode.com/problems/range-sum-query-immutable/?tab=Description
-//Arthor: lhy-loveworld
 //Method: Many calls to sumRange function, can trade in space for time.
 //        Simplest way is to brute force, time complexity O(N) for each query; space comlexity is O(1) for each query
 //        Or we can use hash map to store the sum for each pair, overhead constructor complexity for both time and space are O(N^2), O(1) for each query

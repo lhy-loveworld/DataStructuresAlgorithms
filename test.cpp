@@ -13,7 +13,6 @@ int main() {
 	list<int>::iterator it = te.begin();
 	te.push_front(2);
 	te.erase(it);
-	te.push_front(1);
-	if (it == te.begin()) cout << te.front() << te.back();
+	cout << *it;
 	return 0;
 }

@@ -13,7 +13,52 @@
   v.back()
   v.pop_back()
   v.reserve(n)
+
+#deque：
+	double-ended queue
+	elements scattered in different chunks of storage
+
+	deque<T> dq(size, value);
+	[]
+
+#list:
+  doubly-linked list
+  list<T> l(size, value);
+  l.front();
+  l.back();
+
+#forward_list:
+	singly-linked list
+	forward_list<T> ft(size, value);
+	l.front();
+
+#queue:
+	underlying container can be list or deque
+
+#priority_queue:
+  can be used as a binary heap
+  in default it is a maximum heap
   
+  can use a self-designed struct compare
+  
+  internal underlying container can be vector(default) or deque
+
+	struct edge {
+		int a;
+		int b;
+		edge(int a1 = 0, int b1 = 0) {a = a1; b = b1;}
+	};
+
+	struct comparator {
+		bool operator() (edge e1, edge e2) {
+			return e1.b < e2.b; //means e1 will be put behind e2
+		}
+	};
+  
+  priority_queue <edge, vector<edge>, comparator> q;
+  q.push(element);
+  q.pop();
+  q.top();
 -------------------------------------------------------------------------------------------------
 set: binary search tree, stores key, ordered by key, key unique
 multiset binary search tree, stores key, ordered by key, key not unique
@@ -30,10 +75,10 @@ unordered_multimap: hash table, stores <key,value>, hashed by key, key not uniqu
   
   <map>
   
-struct classcomp {
-  bool operator() (const char& lhs, const char& rhs) const
-  {return lhs<rhs;}
-};
+	struct classcomp {
+  	bool operator() (const char& lhs, const char& rhs) const
+  		{return lhs<rhs;}
+	};
 
   map<char,int,classcomp> fourth;
   map[key] = value;
@@ -46,27 +91,3 @@ struct classcomp {
   map.upper_bound(key)
   map.equal_range(key) //pair<iterator, iterator>
 -------------------------------------------------------------------------------------------
-#priority_queue:
-  can be used as a binary heap
-  in default it is a maximum heap
-  
-  can use a self-designed struct compare
-  <queue>
-
-struct edge {
-	int a;
-	int b;
-	edge(int a1 = 0, int b1 = 0) {a = a1; b = b1;}
-};
-
-struct comparator {
-	bool operator() (edge e1, edge e2) {
-		return e1.b < e2.b; //means e1 will be put behind e2
-	}
-};
-  
-  priority_queue <edge, vector<edge>, comparator> pq;
-  q.push(element);
-  q.pop();
-  q.top();
-  

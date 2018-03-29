@@ -7,6 +7,7 @@
 class Solution {
 public:
     //Method 1: Calculate from both directions
+    //Because all the int number are > 1, thus contain all the numbers or except the first negetive number or except the last negetive number
     int maxProduct(vector<int>& nums) {
         int frontP = 1, backP = 1, res = INT_MIN;
         for (int i = 0; i < nums.size(); ++i) {

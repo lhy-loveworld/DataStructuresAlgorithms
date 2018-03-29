@@ -3,6 +3,7 @@
 //https://leetcode.com/problems/3sum/?tab=Description
 //Arthor: lhy-loveworld
 //Method: Convert it into a loop of 2 Sum. First sort it and then use two-pointer method
+//        Result set cannot contain duplicate tripples, so we must sort it.
 //Complexity: Time O(NlogN+N^2) = O(N^2); Space O(N)
 
 class Solution {

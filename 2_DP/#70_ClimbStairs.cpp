@@ -7,14 +7,14 @@
 //Complexity: Time: best case O(1), worst case O(n) Space O(n)
 
 class Solution {
-    vector<int> result = vector<int> (2,1);
 public:
     int climbStairs(int n) {
-        if (n > result.size()-1)
-            for (int i = result.size() - 1; i < n + 1; i++)
-            {
-                result.push_back(result[i]+result[i-1]);
-            }
-        return result[n];
+        if (n == 1) return 1;
+        int pprev = 1, prev = 1;
+        for (int i = 2; i <= n; ++i) {
+            swap(pprev, prev);
+            prev += pprev;
+        }
+        return prev;
     }
 };

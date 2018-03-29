@@ -6,7 +6,7 @@
 
 class Solution {
 public:
-    //Bit map
+    //Method 1: Bit map
     vector<vector<int>> subsets(vector<int>& nums) {
     	unsigned long long S = 1 << nums.size();
     	vector<vector<int>> res(S, vector<int>());
@@ -19,7 +19,7 @@ public:
     	return res;
     }
 
-    //iteration
+    //Method 2: iteration
     vector<vector<int>> subsets(vector<int>& nums) {
     	vector<vector<int>> res(1, vector<int>());
     	for (int i = 0; i < nums.size(); ++i) {
@@ -32,7 +32,7 @@ public:
     	return res;
     }
 
-    //recursion, backtrack
+    //Method 3: recursion, backtrack
     void subgen(vector<vector<int>>& res, vector<int>& tmp, int next, vector<int>& nums) {
     	res.push_back(tmp);
     	for (int i = next; i < nums.size(); ++i) {

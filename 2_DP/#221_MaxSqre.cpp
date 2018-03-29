@@ -1,6 +1,7 @@
 //#221 Maximal Square
 //Medium
-//Method: How a square grows
+//Method: How a square grows, when a position in the matrix is 1, the square whose right-bottom corner is here's length is the minimum of 
+//        the other 3 directions + 1.
 //Time complexity: O(M*N)
 //Space complexity: O(N)
 

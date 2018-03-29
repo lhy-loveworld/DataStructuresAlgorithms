@@ -22,13 +22,14 @@ public:
     }
 
     //Method 2: BFS
+
     int coinChange(vector<int>& coins, int amount) {
         if (amount < 0 || coins.empty()) return -1;
         if (amount == 0) return 0;
-        vector<int> helper(amount, -1);
+        vector<int> helper(amount, -1); //the reason we need to use helper is to reduce repitition work
         queue<int> helpQ;
         for (int i = 0; i < coins.size(); ++i) {
-            if (coins[i] > amount) continue;
+            if (coins[i] > amount) continue;    //the reason why we don't use break is that coins may not be in ascending order
             helper[coins[i] - 1] = 1;
             helpQ.push(coins[i]);
         }

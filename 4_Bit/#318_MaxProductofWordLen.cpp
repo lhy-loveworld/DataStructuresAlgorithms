@@ -2,7 +2,7 @@
 //Medium
 //Arthor: lhy-loveworld
 //Method: Bitmask for each string.
-//Complexity: Time O(N^2); Space O(1)
+//Complexity: Time O(N^2); Space O(N)
 
 class Solution {
 public:

@@ -9,24 +9,20 @@ class Solution {
 public:
 	//Method 1: BFS
     int numSquares(int n) {
-        vector<int> perfS;
-        vector<int> helper(n, 0);
+        vector<int> perfS;  //to store all the perfect squares no larger than n
+        vector<int> helper(n, 0);   //to store the numSquares of all the numbers
+        queue<int> squareQ;
+
+        //store all the perfect squares
         for (int i = 1; i * i <= n; ++i) {
             perfS.push_back(i * i);
             helper[i * i - 1] = 1;
+            squareQ.push(i * i);
         }
         if (helper[n - 1]) return 1;
-        queue<int> squareQ;
-        int curCnt = 2;
-        for (int i = 0; i < perfS.size(); ++i) {
-            for (int j = i; j < perfS.size(); ++j) {
-                if (perfS[i] + perfS[j] > n) break;
-                if (helper[perfS[i] + perfS[j] - 1] == 0) {
-                    squareQ.push(perfS[i] + perfS[j]);
-                    helper[perfS[i] + perfS[j] - 1] = curCnt;
-                }
-            }
-        }
+        
+        //do BFS search
+        int curCnt = 1;
         while (helper[n - 1] == 0) {
             ++curCnt;
             int rnd = squareQ.size();
@@ -41,7 +37,7 @@ public:
                 squareQ.pop();
             }
         }
-        return helper[n - 1];
+        return helper.back();
     }
 
     //Method 2: static variable

@@ -6,12 +6,10 @@
 
 class Solution {
 public:
+    //helper records whether the front n chars can be broken or not
     bool wordBreak(string s, vector<string>& wordDict) {
         if (wordDict.empty()) return false;
-        unordered_set<string> Dict;
-        for (int i = 0; i < wordDict.size(); ++i) {
-            Dict.insert(wordDict[i]);
-        }
+        unordered_set<string> Dict(wordDict.begin(), wordDict.end());
         vector<bool> helper(s.size() + 1, false);
         helper[0] = true;
         for (int i = 0; i < s.size(); ++i) {

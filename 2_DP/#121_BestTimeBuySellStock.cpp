@@ -6,19 +6,17 @@
 
 class Solution {
 public:
-    //Record the extreme points
+    //Record the current minimum
     int maxProfit(vector<int>& prices) {
-        int res = 0, Min = INT_MAX, Max = 0;
+        int res = 0, Min = INT_MAX;
         for (int i = 0; i < prices.size(); ++i) {
             if (prices[i] < Min) {
-                res = max(Max - Min, res);
                 Min = prices[i];
-                Max = prices[i];
             } else {
-                Max = max(Max, prices[i]);
+                res = max(res, prices[i] - Min);
             }
         }
-        return max(res, Max - Min);
+        return res;
     }
 
     //Same as the max sum of subsequence

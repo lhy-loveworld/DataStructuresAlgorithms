@@ -7,6 +7,9 @@
 class Solution {
 public:
     //Method 1: Use stack to find the largest histogram
+    //          store the position in the stack in ascending order of their height
+    //          if there's a height lower than the previous ones, pop out and compute the area of rectangular with the poped height
+    //          its end is fixed, its beginning depends on whether stack is empty or its current top
     int maximalRectangle(vector<vector<char>>& matrix) {
         if (matrix.empty() || matrix[0].empty()) return 0;
         int m = matrix.size(), n = matrix[0].size();
@@ -35,6 +38,8 @@ public:
     }
 
     //Method 2: Store the start and end point of each height.
+    //          use 3 matrices to store the height of current column, the left end and the right end
+    //          matrices can be simplified to vectors
     int maximalRectangle(vector<vector<char>>& matrix) {
         if (matrix.empty() || matrix[0].empty()) return 0;
         int m = matrix.size(), n = matrix[0].size();

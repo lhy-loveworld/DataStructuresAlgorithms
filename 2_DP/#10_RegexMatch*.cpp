@@ -1,12 +1,12 @@
 //#10 Regular Expression Matching
-//Medium
+//Hard
 //Method: DP
 //Time complexity: O(M*N)
 //Space complexity: O(N)
 
 class Solution {
 public:
-    //Method 1: DP
+    //Method 1: DP. Outer loop is for s, and inner loop is for p
     bool isMatch(string s, string p) {
         if (p.empty()) return s.empty();
         vector < vector<bool> > helper(2, vector<bool> (p.size() + 1, false));
@@ -28,7 +28,7 @@ public:
         return helper[0].back();
     }
 
-    //Method 2: recursively
+    //Method 2: recursively from head to end, if p is started with .* or a*, test s with p[2:] and s[1:] with p.
     bool isMatch(string s, string p) {
         if (p.empty()) return s.empty();
         if (p.size() == 1 || p[1] != '*') return !s.empty() && (p[0] == '.' || p[0] == s[0]) && isMatch(s.substr(1), p.substr(1));

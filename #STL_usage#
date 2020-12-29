@@ -33,10 +33,17 @@
 	l.front();
 
 #queue:
-	underlying container can be list or deque
+	underlying container can be list or deque(default)
+	std::queue<int> q;
+	q.push(i);
+	i = q.front();
+	j = q.back();
+	q.pop();
 
 #priority_queue:
   can be used as a binary heap
+
+
   in default it is a maximum heap
   
   can use a self-designed struct or function pointer compare, compare(a,b) == true means a's pirority is lower than b.
@@ -59,6 +66,9 @@
   q.push(element);
   q.pop();
   q.top();
+
+std::sort(container.begin(), container.end(), func);
+By default function is operator<. And thus std::sort by default sort the elements from smaller to larger.
 -------------------------------------------------------------------------------------------------
 set: binary search tree, stores key, ordered by key, key unique
 multiset binary search tree, stores key, ordered by key, key not unique

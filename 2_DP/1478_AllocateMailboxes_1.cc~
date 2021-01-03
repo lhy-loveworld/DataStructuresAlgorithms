@@ -1,0 +1,41 @@
+// #1478. Allocate Mailboxes
+// Hard
+// Method: DP
+// Time Complexity: O(K*N*N)
+// Space Complexity: O(N*N)
+class Solution {
+ public:
+  std::vector<std::vector<int>> mink;
+  int RecFind(const std::vector<std::vector<int>>& min1, int k, int start, int end) {
+    if (k == 1) return min1[start][end];
+    if (mink[k][end] >= 0) return mink[k][end];
+    int res = INT_MAX;
+    for (int i = k - 1; i <= end; ++i) {
+      res = min(res, RecFind(min1, k - 1, 0, i - 1) + min1[i][end]);
+    }
+    mink[k][end] = res;
+    return res;
+  }
+  int minDistance(vector<int>& houses, int k) {
+    int n = houses.size();
+    std::sort(houses.begin(), houses.end());
+    for (int i = 1; i < n; ++i) {
+      houses[i] += houses[i-1];
+    }
+    std::vector<std::vector<int>> min1(n, std::vector<int>(n));
+    for (int i = 0; i < n; ++i) {
+      for (int j = i + 1; j < n; ++j) {
+        int len = j - i + 1;
+        int mid = (i + j) / 2;
+        min1[i][j] = houses[j] - houses[mid] * 2;
+	if (len % 2 == 1) {
+          min1[i][j] = min1[i][j] + houses[mid] - houses[mid - 1];
+        }
+        if (i != 0) min1[i][j] += houses[i - 1];
+      }
+    }
+    mink = std::vector<std::vector<int>>(k + 1, std::vector<int>(n, -1));
+
+    return RecFind(min1, k, 0, n - 1);
+  }
+};

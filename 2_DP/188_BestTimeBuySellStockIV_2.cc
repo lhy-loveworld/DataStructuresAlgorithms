@@ -11,7 +11,8 @@ class Solution {
   // Since there is at most one trade at a time, there are only two status: after_buy and after_sell.
   // buys[k][n] = max(buys[k][n - 1], sells[k - 1][n] - price[n])
   // sells[k][n] = max(sells[k][n - 1], buys[k][n] + price[n])
-  // You cannot buy/sell more than once in a single day. So status[k][n] can only compare with status[k][n-1].
+  // buys[k][n] means the maximum balance at day n after completing at most k buyings. sells[k][n] means the the maximum balance at day n after at most k sellings.
+  // The key of DP is that the right side of equation must include all cases.
   int maxProfit(int k, vector<int>& prices) {
     if (prices.empty() || k == 0) return 0;
     int n = prices.size();

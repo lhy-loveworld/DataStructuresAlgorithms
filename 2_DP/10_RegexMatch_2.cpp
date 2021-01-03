@@ -1,8 +1,8 @@
-//#10 Regular Expression Matching
-//Hard
-//Method: DP
-//Time complexity: O(M*N)
-//Space complexity: O(N)
+// #10 Regular Expression Matching
+// Hard
+// Method: DP
+// Time complexity: O(M*N)
+// Space complexity: O(N)
 
 class Solution {
  public:

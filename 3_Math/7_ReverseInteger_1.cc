@@ -1,11 +1,11 @@
-//#7
-//Easy
-//https://leetcode.com/problems/reverse-integer/?tab=Description
-//Arthor: lhy-loveworld
-//Method: Caution for overflow case!
-//        Another method is to use a long long type to do it
-//        The second method is a little slower
-//Complexity: time O(n); space O(1)
+// #7
+// Easy
+// https://leetcode.com/problems/reverse-integer/?tab=Description
+// Arthor: lhy-loveworld
+// Method: Caution for overflow case!
+//         Another method is to use a long long type to do it
+//         The second method is a little slower
+// Complexity: time O(n); space O(1)
 
 class Solution {
  public:
@@ -30,7 +30,8 @@ class Solution {
     while (x) {
       ans = ans * 10 + x % 10;
       x /= 10;
+      if (ans < INT_MIN || ans > INT_MAX) return 0;
     }
-    return (ans < INT_MIN || ans > INT_MAX) ? 0 : ans;
+    return ans;
   }
 };
